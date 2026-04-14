@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EEEP Lúcia Baltazar Costa</title>
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORES */
+:root {
+    --verde: #2ECC71;
+    --verde-escuro: #27AE60;
+    --laranja: #F39C12;
+    --preto: #222;
+    --branco: #fff;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--branco);
+    color: var(--preto);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, var(--verde), var(--verde-escuro));
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--laranja);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('img/banner.jpg'); /* COLOQUE SUA IMAGEM AQUI */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: var(--laranja);
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-top: 5px solid var(--verde);
+    text-align: center;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-top: 5px solid var(--laranja);
+}
+
+/* SEÇÕES */
+section {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+/* CONTEUDO */
+.conteudo {
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>EEEP Lúcia Baltazar Costa</h2>
+
+    <nav>
+        <a onclick="mostrar('home')">Início</a>
+        <a onclick="mostrar('sobre')">Sobre</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+
+<div class="hero">
+    <h2>Educação de Excelência</h2>
+    <p>
+        A EEEP Lúcia Baltazar Costa oferece ensino médio integrado à formação técnica,
+        preparando jovens para o mercado de trabalho e para o ensino superior.
+    </p>
+</div>
+
+<h2 style="text-align:center;margin-top:30px;">Cursos Técnicos</h2>
+
+<div class="cards">
+    <div class="card" onclick="mostrar('adm')">Administração</div>
+    <div class="card" onclick="mostrar('ds')">Desenvolvimento de Sistemas</div>
+    <div class="card" onclick="mostrar('edi')">Edificações</div>
+    <div class="card" onclick="mostrar('masso')">Massoterapia</div>
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+<div class="conteudo">
+
+<h2>Sobre a Escola</h2>
+
+<p>
+A Escola Estadual de Educação Profissional Lúcia Baltazar Costa, localizada em Limoeiro do Norte – CE,
+tem como missão oferecer uma educação de excelência, integrando o ensino médio à formação técnica.
+</p>
+
+<p>
+A instituição prepara os estudantes tanto para o ensino superior quanto para o mercado de trabalho,
+desenvolvendo habilidades profissionais, pensamento crítico e responsabilidade social.
+</p>
+
+</div>
+</section>
+
+<!-- ADMINISTRAÇÃO -->
+<section id="adm">
+<div class="conteudo">
+<h2>Técnico em Administração</h2>
+<img src="img/adm.jpg">
+
+<p>
+O curso Técnico em Administração tem como objetivo formar profissionais capacitados para atuar na organização e gestão de empresas.
+</p>
+
+<p>
+Durante o curso, os alunos estudam áreas como gestão financeira, marketing, recursos humanos e planejamento estratégico, desenvolvendo habilidades importantes para o ambiente empresarial.
+</p>
+
+<p>
+Ao concluir a formação, o estudante poderá atuar em empresas públicas e privadas ou desenvolver seu próprio negócio.
+</p>
+
+</div>
+</section>
+
+<!-- DS -->
+<section id="ds">
+<div class="conteudo">
+<h2>Desenvolvimento de Sistemas</h2>
+<img src="img/ds.jpg">
+
+<p>
+O curso de Desenvolvimento de Sistemas prepara o aluno para atuar na área de tecnologia da informação.
+</p>
+
+<p>
+Durante a formação, os estudantes aprendem programação, criação de sites, banco de dados e desenvolvimento de sistemas, além de lógica computacional.
+</p>
+
+<p>
+O profissional formado poderá atuar como desenvolvedor, programador ou seguir carreira na área de tecnologia.
+</p>
+
+</div>
+</section>
+
+<!-- EDIFICAÇÕES -->
+<section id="edi">
+<div class="conteudo">
+<h2>Técnico em Edificações</h2>
+<img src="img/edi.jpg">
+
+<p>
+O curso Técnico em Edificações prepara o aluno para atuar na construção civil.
+</p>
+
+<p>
+Durante o curso, o estudante aprende a interpretar projetos, acompanhar obras e aplicar normas técnicas.
+</p>
+
+<p>
+O profissional poderá trabalhar em construtoras, escritórios de engenharia ou no acompanhamento de obras.
+</p>
+
+</div>
+</section>
+
+<!-- MASSOTERAPIA -->
+<section id="masso">
+<div class="conteudo">
+<h2>Massoterapia</h2>
+<img src="img/masso.jpg">
+
+<p>
+O curso de Massoterapia é voltado para a área da saúde e bem-estar.
+</p>
+
+<p>
+Os alunos aprendem técnicas de massagem terapêutica, anatomia e cuidados com o corpo.
+</p>
+
+<p>
+O profissional pode atuar em clínicas, spas ou de forma autônoma.
+</p>
+
+</div>
+</section>
+
+<footer>
+<p>📍 Limoeiro do Norte - CE</p>
+</footer>
+
+<script>
+
+function mostrar(secao) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(secao).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
